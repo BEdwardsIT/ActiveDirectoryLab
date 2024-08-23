@@ -2,47 +2,62 @@
 
 <h2>Description</h2>
 
+Welcome to my Active Directory Home Lab Project! This project is designed to help IT enthusiasts and professionals set up a simulated Active Directory environment. By following this guide, you'll gain hands-on experience with AD administration, user and group management, Group Policy settings, and essential networking services like DNS and DHCP.
+
+Whether you're preparing for certifications, enhancing your skills, or just exploring AD functionalities, this home lab provides a practical and controlled environment to experiment and learn.
+
+
+
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
+- <b>Active Directory</b>
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>CMD</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Oracle VirtualBox</b>
+- <b>Windows 10</b> (21H2)</b>
+- <b>Windows Server 2022</b>
+
+<h2>Links</h2>
+
+- <b>Oracle: https://www.virtualbox.org/</b>
+- <b>Windows 10: https://www.microsoft.com/en-us/software-download/windows10</b>
+- <b>Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/download-windows-server-2022</b>
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+step 1: <br/>
+<img src=""/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 2:  <br/>
+<img src=""/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 3: <br/>
+<img src=""/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 4:  <br/>
+<img src=""/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 5:  <br/>
+<img src=""/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 6:  <br/>
+<img src=""/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 7:  <br/>
+<img src=""/>
 </p>
 
 <!--
