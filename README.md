@@ -49,17 +49,27 @@ Whether you're preparing for certifications, enhancing your skills, or just expl
     <div class="container">
         <div class="main">
             <div class="step" id="step1">
-                <h2>Step 1: Download and Install Oracle VirtualBox</h2>
-                <p>Download and install Oracle VirtualBox and the extension pack from the official website.</p>
-                <img src="images/step1.png" alt="Download and Install Oracle VirtualBox">
+                <h2>Step 1: Download and Install Oracle VirtualBox, then download Windows ISOs</h2>
+                <p>Feel free to use the links I've posted above for faster reference. After downloading VirtualBox, you'll want to download the 'extension pack'. Also, it's best practice to keep your ISO files centrally located so they're easier to find.</p>
+                <img src="images/step1.png" alt="Download and Install Oracle VirtualBox"><br/>
+                <img src="images/step1.png" alt="Download Extension Pack""><br/>
             </div>
             <div class="step" id="step2">
-                <h2>Step 2: Create Virtual Machines</h2>
-                <p>Create a virtual machine for the domain controller with two network adapters: one for the internet and one for the internal network.</p>
-                <img src="images/step2.png" alt="Create Virtual Machines">
+                <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
+                <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.
+<br/> 
+
+Before we start our new machine, let's make a few changes.<br/> 
+                    
+First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "bidirectional". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two adapters: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
+
+Now, we're ready to start our machine and install Server 2022.</p>
+                <img src="images/step2.png" alt="Create Virtual Machines"><br/>
+                <img src="images/step2.png" alt="Run 'Guest Additions' software"><br/>
+                <img src="images/step2.png" alt="Set up Network Adapters"><br/>
             </div>
             <div class="step" id="step3">
-                <h2>Step 3: Install Server 2019</h2>
+                <h2>Step 3: Install Active Directory and Set Up Routing Scheme.</h2>
                 <p>Install Windows Server 2019 on the domain controller and configure IP addressing, the name, Active Directory, DHCP, and routing.</p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
