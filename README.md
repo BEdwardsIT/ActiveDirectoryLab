@@ -59,16 +59,26 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
             <div class="step" id="step2">
                 <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
                 <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.
+<img src="https://github.com/user-attachments/assets/a6110afa-fde1-460a-8309-b79c4db4436d">
+<img src="https://github.com/user-attachments/assets/c5b4f7d2-dcbd-40f1-bac3-1d7bb57e8de0">
+
+
 <br/> 
 
 Before we start our new machine, let's make a few changes.<br/> 
                     
-First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "bidirectional". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two adapters: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
+First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "bidirectional". This function allows us to copy/paste from host to VM and vice versa.<br/>
+<img src="https://github.com/user-attachments/assets/d88679e8-0d7a-4351-895a-9c5f341643c3"><br/>
+
+Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two adapters: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
+<img src="https://github.com/user-attachments/assets/5e9bda54-977a-4d28-9a99-ec3e5116db20">
+<img src="https://github.com/user-attachments/assets/f58ec5aa-2b3a-406b-b1c9-d644b576208c"><br/>
 
 Now, we're ready to start our machine and install Server 2022.</p>
                 <img src="images/step2.png" alt="Create Virtual Machines"><br/>
                 <img src="images/step2.png" alt="Run 'Guest Additions' software"><br/>
                 <img src="images/step2.png" alt="Set up Network Adapters"><br/>
+            </div>
             </div>
             <div class="step" id="step3">
                 <h2>Step 3: Install Active Directory and Set Up Routing Scheme.</h2>
