@@ -74,11 +74,11 @@ Click "OK" to accept, then go to the "Network" option. Here, you'll need to set 
 <img src="https://github.com/user-attachments/assets/5e9bda54-977a-4d28-9a99-ec3e5116db20">
 <img src="https://github.com/user-attachments/assets/f58ec5aa-2b3a-406b-b1c9-d644b576208c"><br/>
 
-Now, we're ready to start our machine and install Server 2022.</p>
-                <img src="images/step2.png" alt="Create Virtual Machines"><br/>
-                <img src="images/step2.png" alt="Run 'Guest Additions' software"><br/>
-                <img src="images/step2.png" alt="Set up Network Adapters"><br/>
-            </div>
+Now, we're ready to start our machine and install Server 2022.
+
+</p>
+        
+</div>
             </div>
             <div class="step" id="step3">
                 <h2>Step 3: Install Active Directory and Set Up Routing Scheme.</h2>
