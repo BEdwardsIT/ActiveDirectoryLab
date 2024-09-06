@@ -61,7 +61,7 @@ Whether you're preparing for certifications, enhancing your skills, or just expl
 
 Before we start our new machine, let's make a few changes.<br/> 
                     
-First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "bidirectional". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two adapters: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
+First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "<img src="images/step2.png" alt="bidirectional">". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two <img src="images/step2.png" alt="adapters">: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
 
 Now, we're ready to start our machine and install Server 2022.</p>
                 <img src="images/step2.png" alt="Create Virtual Machines"><br/>
