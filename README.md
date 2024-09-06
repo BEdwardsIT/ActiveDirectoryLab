@@ -6,6 +6,8 @@ Welcome to my Active Directory Home Lab Project! This project is designed to hel
 
 Whether you're preparing for certifications, enhancing your skills, or just exploring AD functionalities, this home lab provides a practical and controlled environment to experiment and learn.
 
+Here's a diagram of out lab. As you can see, it outlines all of the tools we'll be using to complete the project. <br/>
+![IP Diagram1](https://github.com/user-attachments/assets/ef52c009-e5f6-4421-8db9-f2e819ba102b)
 
 
 <br />
@@ -51,8 +53,8 @@ Whether you're preparing for certifications, enhancing your skills, or just expl
             <div class="step" id="step1">
                 <h2>Step 1: Download and Install Oracle VirtualBox, then download Windows ISOs</h2>
                 <p>Feel free to use the links I've posted above for faster reference. After downloading VirtualBox, you'll want to download the 'extension pack'. Also, it's best practice to keep your ISO files centrally located so they're easier to find.</p>
-                <img src="images/step1.png" alt="Download and Install Oracle VirtualBox"><br/>
-                <img src="images/step1.png" alt="Download Extension Pack""><br/>
+                <img src="https://github.com/user-attachments/assets/be54b919-64a0-48cb-97b1-861ba9dc5aaa"><br/>
+            </div>
             </div>
             <div class="step" id="step2">
                 <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
@@ -61,7 +63,7 @@ Whether you're preparing for certifications, enhancing your skills, or just expl
 
 Before we start our new machine, let's make a few changes.<br/> 
                     
-First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "<img src="images/step2.png" alt="bidirectional">". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two <img src="images/step2.png" alt="adapters">: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
+First, click the "General" tab, then choose "Advanced". Change both the "clipboard" and "drag" settings to "bidirectional". This function allows us to copy/paste from host to VM and vice versa. Click "OK" to accept, then go to the "Network" option. Here, you'll need to set up two adapters: one for internet (labeled "NAT") and the other for your internal network (labeled "intnet"). <br/>
 
 Now, we're ready to start our machine and install Server 2022.</p>
                 <img src="images/step2.png" alt="Create Virtual Machines"><br/>
