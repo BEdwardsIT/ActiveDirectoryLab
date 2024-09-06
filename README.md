@@ -53,14 +53,14 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
             <div class="step" id="step1">
                 <h2>Step 1: Download and Install Oracle VirtualBox, then download Windows ISOs</h2>
                 <p>Feel free to use the links I've posted above for faster reference. After downloading VirtualBox, you'll want to download the 'extension pack'. Also, it's best practice to keep your ISO files centrally located so they're easier to find.</p>
-                <img src="https://github.com/user-attachments/assets/be54b919-64a0-48cb-97b1-861ba9dc5aaa"><br/>
+                <img src="https://github.com/user-attachments/assets/429472a0-b34f-48d8-be7c-6e56e009ce4b"><br/>
             </div>
             </div>
             <div class="step" id="step2">
                 <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
                 <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.
-<img src="https://github.com/user-attachments/assets/a6110afa-fde1-460a-8309-b79c4db4436d">
-<img src="https://github.com/user-attachments/assets/c5b4f7d2-dcbd-40f1-bac3-1d7bb57e8de0">
+<img src="https://github.com/user-attachments/assets/b1dee45b-b3c8-4461-af4e-a4e97417e86a">
+<img src="https://github.com/user-attachments/assets/a77b712b-d4b1-4458-96a0-9167329445d7">
 
 
 <br/> 
@@ -75,16 +75,16 @@ Click "OK" to accept, then go to the "Network" option. Here, you'll need to set 
 <img src="https://github.com/user-attachments/assets/f58ec5aa-2b3a-406b-b1c9-d644b576208c"><br/>
 
 Now, we're ready to start our machine and install Server 2022. For your installation option, choose "Custom". Then, choose either of the "Desktop Experience" options for your operating system. On the following screen, choose a password (*preferably one that's easy to remember*) and click "finish".<br/>
-<img src="https://github.com/user-attachments/assets/da8454b8-783d-4446-a0b7-1f8cb618b1b9"><br/>
+<img src="https://github.com/user-attachments/assets/6fc43e16-f751-4845-8178-f6ca119f2ddc"><br/>
 <br/>
 Congratulations! Your machine is now ready to use. You'll be greeted with this screen...<br/>
-<img src="https://github.com/user-attachments/assets/13382048-eb51-47b6-978e-d1c4c47a45de">
+<img src="https://github.com/user-attachments/assets/36219d6d-c6bb-47c1-a53a-3250a6538517">
 
-and asked to enter "ctrl+alt+del" so navigate up to "input", choose "keyboard", then "ctrl-alt-del".
+and asked to enter "ctrl+alt+del" so navigate up to "input", choose "keyboard", then "ctrl-alt-del".<br/>
 <img src="https://github.com/user-attachments/assets/4c07208b-59e2-47a7-a05b-cf9af14e463e">
 
 Enter your newly created (and, hopefully, easy) password to sign in.<br/>
-<img src="https://github.com/user-attachments/assets/a6146c64-a245-41c1-babf-a3399255fd86"><br/>
+<img src="https://github.com/user-attachments/assets/78992384-7bb6-4c64-a0e6-b15248c56301"><br/>
 
 
 </p>
