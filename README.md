@@ -75,7 +75,17 @@ Click "OK" to accept, then go to the "Network" option. Here, you'll need to set 
 <img src="https://github.com/user-attachments/assets/f58ec5aa-2b3a-406b-b1c9-d644b576208c"><br/>
 
 Now, we're ready to start our machine and install Server 2022. For your installation option, choose "Custom". Then, choose either of the "Desktop Experience" options for your operating system. On the following screen, choose a password (*preferably one that's easy to remember*) and click "finish".<br/>
-<img src="https://github.com/user-attachments/assets/da8454b8-783d-4446-a0b7-1f8cb618b1b9">
+<img src="https://github.com/user-attachments/assets/da8454b8-783d-4446-a0b7-1f8cb618b1b9"><br/>
+<br/>
+Congratulations! Your machine is now ready to use. You'll be greeted with this screen...<br/>
+<img src="https://github.com/user-attachments/assets/13382048-eb51-47b6-978e-d1c4c47a45de">
+
+and asked to enter "ctrl+alt+del" so navigate up to "input", choose "keyboard", then "ctrl-alt-del".
+<img src="https://github.com/user-attachments/assets/4c07208b-59e2-47a7-a05b-cf9af14e463e">
+
+Enter your newly created (and, hopefully, easy) password to sign in.<br/>
+<img src="https://github.com/user-attachments/assets/a6146c64-a245-41c1-babf-a3399255fd86"><br/>
+
 
 </p>
         
