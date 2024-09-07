@@ -85,6 +85,12 @@ and asked to enter "ctrl+alt+del" so navigate up to "input", choose "keyboard", 
 
 Enter your newly created (and, hopefully, easy) password to sign in.<br/>
 <img src="https://github.com/user-attachments/assets/78992384-7bb6-4c64-a0e6-b15248c56301"><br/>
+Before proceeding to the next step, let's run the "Guest Additions" CD image. This will make our VM run more efficiently. To do this, click "devices", then "insert Guest Additions CD image".<br/>
+<img src="https://github.com/user-attachments/assets/ec63c3e0-1b10-4abc-8df0-1307d853d9de"><br/>
+From here, you'll want to head to file explorer. You'll see the disc image in your "D drive". Double-click the "amd-64" version and follow the prompts to begin installing. Once that's done, you'll be asked if you want to reboot. You (obviously) can if you choose to but there's one more thing to do heading to Step 3 that will also require a reboot.<br/>
+
+Let's rename our computer.<br/>
+Start by right-clicking the "start" tab and going to "system". Click the "Rename this PC" button and choose your PC's new name. Again, the choice is yours. Restart the VM after renaming and we'll be ready for Step 3!
 
 
 </p>
@@ -92,8 +98,8 @@ Enter your newly created (and, hopefully, easy) password to sign in.<br/>
 </div>
             </div>
             <div class="step" id="step3">
-                <h2>Step 3: Install Active Directory and Set Up Routing Scheme.</h2>
-                <p>Install Windows Server 2019 on the domain controller and configure IP addressing, the name, Active Directory, DHCP, and routing.</p>
+                <h2>Step 3: Set Up Networking and Install Active Directory.</h2>
+                <p>Install Active Directory on the domain controller and configure IP addressing, DHCP, and routing.</p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
