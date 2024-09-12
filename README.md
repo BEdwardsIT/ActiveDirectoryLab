@@ -90,6 +90,7 @@ Before proceeding to the next step, let's run the "Guest Additions" CD image. Th
 From here, you'll want to head to file explorer. You'll see the disc image in your "D drive". Double-click the "amd-64" version and follow the prompts to begin installing. Once that's done, you'll be asked if you want to reboot. You (obviously) can if you choose to but there's one more thing to do heading to Step 3 that will also require a reboot.<br/>
 
 Let's rename our computer.<br/>
+<br/>
 Start by right-clicking the "start" tab and going to "system". Click the "Rename this PC" button and choose your PC's new name. Again, the choice is yours. Restart the VM after renaming and we'll be ready for Step 3!
 
 
@@ -99,7 +100,11 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
             </div>
             <div class="step" id="step3">
                 <h2>Step 3: Set Up Networking and Install Active Directory.</h2>
-                <p>Install Active Directory on the domain controller and configure IP addressing, DHCP, and routing.</p>
+                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning IP addresses for internet and internal NICs, installing RAS/NAT and setting up a DHCP scope, as well as installing active directory.<br/>
+                <br/>
+Let's begin with the IP addresses. One will connect to your home router, the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
+               <br/>
+We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters. The one labeled "unidentified network" will serve as the internal connection.</p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
