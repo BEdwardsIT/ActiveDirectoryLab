@@ -58,7 +58,7 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
             </div>
             <div class="step" id="step2">
                 <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
-                <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.
+                <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.<br/>
 <img src="https://github.com/user-attachments/assets/b1dee45b-b3c8-4461-af4e-a4e97417e86a">
 <img src="https://github.com/user-attachments/assets/a77b712b-d4b1-4458-96a0-9167329445d7">
 
