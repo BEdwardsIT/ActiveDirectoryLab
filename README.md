@@ -104,7 +104,9 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
                 <br/>
 Let's begin with the IP addresses. One will connect to your home router, the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
                <br/>
-We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters. The one labeled "unidentified network" will serve as the internal connection.</p>
+We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters, "Ethernet" and "Ethernet2. Ethernet2 will serve as the internal connection. Double-click "Ethernet 2", then click "properties". After that, double-click on "Internet Protocol Version 4 (TCP/IPv4). This is where we'll assign our new IP address. From here, choose the "Use the following IP address" option and use "172.16.0.1" as your IP address. For the subnet mask, use "255.255.255.0". Leave the default gateway section blank. For the section below, labeled "Use the following DNS server addresses", we can use either the "172" IP address or you can use "127.0.0.1", which is a loopback address. Click "OK" to complete that portion and our IP address setup is now finished.<br/>
+                
+</p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
