@@ -100,13 +100,17 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
             </div>
             <div class="step" id="step3">
                 <h2>Step 3: Set Up Networking and Install Active Directory.</h2>
-                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning IP addresses for internet and internal NICs, installing RAS/NAT and setting up a DHCP scope, as well as installing active directory.<br/>
+                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, installing RAS/NAT and setting up a DHCP scope, as well as installing active directory.<br/>
                 <br/>
-Let's begin with the IP addresses. One will connect to your home router, the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
+Let's begin with the IP address. One will connect to your home router so we'll leave it as is; the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
                <br/>
-We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters, "Ethernet" and "Ethernet2. Ethernet2 will serve as the internal connection. Double-click "Ethernet 2", then click "properties". After that, double-click on "Internet Protocol Version 4 (TCP/IPv4). This is where we'll assign our new IP address. From here, choose the "Use the following IP address" option and use "172.16.0.1" as your IP address. For the subnet mask, use "255.255.255.0". Leave the default gateway section blank. For the section below, labeled "Use the following DNS server addresses", we can use either the "172" IP address or you can use "127.0.0.1", which is a loopback address. Click "OK" to complete that portion and our IP address setup is now finished.<br/>
+We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters, "Ethernet" and "Ethernet2". Ethernet2 will serve as the internal connection. Double-click "Ethernet 2", then click "properties". After that, double-click on "Internet Protocol Version 4 (TCP/IPv4)". This is where we'll assign our new IP address. From here, choose the "Use the following IP address" option and use "172.16.0.1" as your IP address. For the subnet mask, use "255.255.255.0". Leave the default gateway section blank. For the section below, labeled "Use the following DNS server addresses", we can use either the "172" IP address or you can use "127.0.0.1", which is a loopback address. Click "OK" to complete that portion and our IP address setup is now finished.<br/>
                 
-</p>
+Our next step will be installing Active Directory.<br/>
+<br/>
+Begin by open your "Server Manager" and clicking on "Add roles and features". Click "Next" until you reach the screen labeled "Select server role", at which point you'll choose "Active Directory Domain Services". Click the "Add Features" button on the pop-up screen and "next" until you reach the "install" button. Click to begin installation. Once that's finished, we can move on to the next step; promoting the server to Domain Controller.<br/>
+<br/>
+Click on the flag icon in the top right corner of your Server Manager, then click on the "Promote this server to a domain controller" option. On the pop-up screen, select "add a new forest", then choose a name for your domain. *For simplicity's sake, I chose "mydomain.com" but you can name yours as you see fit.* On the next screen, you'll be asked to enter a password. You won't use it but you have to enter it in order to move to the next screen so it's best to use the password your used to log in. Click "next" until you reach the "install" button. Once you click it, your machine will automatically restart. </p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
