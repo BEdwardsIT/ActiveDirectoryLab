@@ -110,7 +110,11 @@ Our next step will be installing Active Directory.<br/>
 <br/>
 Begin by open your "Server Manager" and clicking on "Add roles and features". Click "Next" until you reach the screen labeled "Select server role", at which point you'll choose "Active Directory Domain Services". Click the "Add Features" button on the pop-up screen and "next" until you reach the "install" button. Click to begin installation. Once that's finished, we can move on to the next step; promoting the server to Domain Controller.<br/>
 <br/>
-Click on the flag icon in the top right corner of your Server Manager, then click on the "Promote this server to a domain controller" option. On the pop-up screen, select "add a new forest", then choose a name for your domain. *For simplicity's sake, I chose "mydomain.com" but you can name yours as you see fit.* On the next screen, you'll be asked to enter a password. You won't use it but you have to enter it in order to move to the next screen so it's best to use the password your used to log in. Click "next" until you reach the "install" button. Once you click it, your machine will automatically restart. </p>
+Click on the flag icon in the top right corner of your Server Manager, then click on the "Promote this server to a domain controller" option. On the pop-up screen, select "add a new forest", then choose a name for your domain. *For simplicity's sake, I chose "mydomain.com" but you can name yours as you see fit.* On the next screen, you'll be asked to enter a password. You won't use it but you have to enter it in order to move to the next screen so it's best to use the password you used to log in. Click "next" until you reach the "install" button. Click it and your machine will automatically restart.  <br/>
+<br/>
+Once your machine restarts, you'll be greeted with a new "MYDOMAIN\Administrator" screen. Sign in to your machine and your account to begin the next portion, where we'll be creating a dedicated domain admin account. <br/>
+
+</p>
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
