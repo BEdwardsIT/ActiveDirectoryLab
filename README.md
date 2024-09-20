@@ -44,6 +44,7 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
                     <li><a href="#step4">Step 4</a></li>
                     <li><a href="#step5">Step 5</a></li>
                     <li><a href="#step6">Step 6</a></li>
+                    <li><a href="#step7">Step 7</a></li>
                 </ul>
             </nav>
         </div>
@@ -120,19 +121,24 @@ Begin by clicking your "start" icon, choose "Windows Administrative Tools", then
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
-                <h2>Step 4: Create Users with PowerShell</h2>
+                <h2>Step 4: Install RAS/NAT</h2>
                 <p>Run a PowerShell script to create a thousand users in Active Directory.</p>
                 <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
             <div class="step" id="step5">
-                <h2>Step 5: Create Client Virtual Machine</h2>
+                <h2>Step 5: Run PowerShell Script and Create Users</h2>
                 <p>Create another virtual machine for the client and install Windows 10 on it.</p>
                 <img src="images/step5.png" alt="Create Client Virtual Machine">
             </div>
             <div class="step" id="step6">
-                <h2>Step 6: Join Client to Domain</h2>
+                <h2>Step 6: Create Client Machine and Install Windows 10</h2>
                 <p>Join the client to the domain and log in with a domain account.</p>
                 <img src="images/step6.png" alt="Join Client to Domain">
+                <div class="step" id="step6">
+                <h2>Step 7: Join Client to Domain</h2>
+                <p>Join the client to the domain and log in with a domain account.</p>
+                <img src="images/step7.png" alt="Join Client to Domain">
+                <div class="step" id="step7">     
             </div>
         </div>
     </div>
