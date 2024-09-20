@@ -121,7 +121,7 @@ Begin by clicking your "start" icon, choose "Windows Administrative Tools", then
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
-                <h2>Step 4: Install RAS/NAT</h2>
+                <h2>Step 4: Install Remote Access Server/Network Address Translation</h2>
                 <p>Run a PowerShell script to create a thousand users in Active Directory.</p>
                 <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
