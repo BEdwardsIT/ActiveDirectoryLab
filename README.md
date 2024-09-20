@@ -51,7 +51,7 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
     <div class="container">
         <div class="main">
             <div class="step" id="step1">
-                <h2>Step 1: Download and Install Oracle VirtualBox, then download Windows ISOs</h2>
+                <h2>Step 1: Download and Install Oracle VirtualBox and Windows ISOs</h2>
                 <p>Feel free to use the links I've posted above for faster reference. After downloading VirtualBox, you'll want to download the 'extension pack'. Also, it's best practice to keep your ISO files centrally located so they're easier to find.</p>
                 <img src="https://github.com/user-attachments/assets/429472a0-b34f-48d8-be7c-6e56e009ce4b"><br/>
             </div>
@@ -99,8 +99,8 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
 </div>
             </div>
             <div class="step" id="step3">
-                <h2>Step 3: Set Up Networking and Install Active Directory.</h2>
-                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, installing RAS/NAT and setting up a DHCP scope, as well as installing active directory.<br/>
+                <h2>Step 3: Set Up Networking, Domain Admin Account and Install Active Directory.</h2>
+                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, installing RAS/NAT and setting up a DHCP scope, as well as installing Active Directory.<br/>
                 <br/>
 Let's begin with the IP address. One will connect to your home router so we'll leave it as is; the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
                <br/>
@@ -114,7 +114,7 @@ Click on the flag icon in the top right corner of your Server Manager, then clic
 <br/>
 Once your machine restarts, you'll be greeted with a new "MYDOMAIN\Administrator" screen. Sign in to your machine and your account to begin the next portion, where we'll be creating a dedicated domain admin account. <br/>
 <br/>
-Begin by clicking your "start" icon, choose "Windows Administrative Tools", then "Active Directory Users and Computers". From there, right-click on your domain name and a drop down menu will appear. Go to "New", then "Organizational Unit". Use "ADMINS" as your "new object" name and uncheck the "Protect container..." option then click OK to continue. Now, right-click "ADMINS", go to "New", then choose "User". We'll fill out our admin information here. Type you first and last name into the appropriate fields and, for "User logon name", format the entry as *a-first initial last name* as shown in the example pic. Click "next" to continue to the password select screen. To keep things simple, just use the password you use to log in to your machine. Make sure the "Password never expires" option is checked and click "Next" to continue, then click "Finish". 
+Begin by clicking your "start" icon, choose "Windows Administrative Tools", then "Active Directory Users and Computers". From there, right-click on your domain name and a drop down menu will appear. Go to "New", then "Organizational Unit". Use "ADMINS" as your "new object" name and uncheck the "Protect container..." option then click OK to continue. Now, right-click "ADMINS", go to "New", then choose "User". We'll fill out our admin information here. Type you first and last name into the appropriate fields and, for "User logon name", format the entry as *a-first initial last name* as shown in the example pic. Click "next" to continue to the password select screen. To keep things simple, just use the password you use to log in to your machine. Make sure the "Password never expires" option is checked and click "Next" to continue, then click "Finish". Finally, right-click on your name, then "Properties". Click on "Member Of", which will open a Domain Services Folder. Click "Add" and type "Domain Admins" into the "Enter the object names..." field. Click "Check Names", then "OK". After that, click "Apply" then "OK" to finish. Now, our domain admin account is ready to use.
 
 </p>
                 <img src="images/step3.png" alt="Install Server 2019">
