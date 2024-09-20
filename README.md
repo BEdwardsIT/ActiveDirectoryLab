@@ -100,8 +100,8 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
 </div>
             </div>
             <div class="step" id="step3">
-                <h2>Step 3: Set Up Networking, Domain Admin Account and Install Active Directory.</h2>
-                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, installing RAS/NAT and setting up a DHCP scope, as well as installing Active Directory.<br/>
+                <h2>Step 3: Networking, Domain Admin Account and Active Directory.</h2>
+                <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, creating a Domain Admin account, as well as installing Active Directory.<br/>
                 <br/>
 Let's begin with the IP address. One will connect to your home router so we'll leave it as is; the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
                <br/>
