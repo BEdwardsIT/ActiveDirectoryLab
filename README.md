@@ -1,6 +1,6 @@
 <h1>Active Directory Home Lab</h1>
 
-<h2>Description</h2>
+<h2>Introduction</h2>
 
 Welcome to my Active Directory Home Lab Project! This project is designed to help IT enthusiasts and professionals set up a simulated Active Directory environment. By following this guide, you'll gain hands-on experience with AD administration, user and group management, Group Policy settings, and essential networking services like DNS and DHCP.
 
@@ -121,8 +121,15 @@ Begin by clicking your "start" icon, choose "Windows Administrative Tools", then
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
-                <h2>Step 4: Install Remote Access Server/Network Address Translation</h2>
-                <p>Run a PowerShell script to create a thousand users in Active Directory.</p>
+                <h2>Step 4: Install Remote Access Server/Network Address Translation and Set DHCP Scope</h2>
+                <p>This is the second half of our networking setup. Installing RAS/NAT will allow our client computer to connect our virtual network and access the internet while our DHCP scope will give us a range of IP addresses for other users and computers to join the network.<br/>
+               <br/>
+Go to "Add Roles and Features" in your Server Manager, just as you did when you installed Active Directory, and click "Next" until your reach "Select server roles". Choose "Remote Access", click "Next", then choose "Routing" on the "Select role services" screen. Click "Add Features", then "Next" until you reach the "Install" button. Wait through another install session.<br/>
+                <br/>
+Once the install is done, go to "Tools" and scroll down to and click "Routing and Remote Access". Right-click on the domain controller name to open a drop-down menu, then choose "Configure and Enable Routing and Remote Access". Click "Next" to open the installation wizard, choose the "NAT" option and click "Next".<br/>
+                    <br/>
+*Note: Sometimes, the 'network interface' field will come up empty. If this happens, simply close the wizard then reopen it.*<br/>
+                </p>
                 <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
             <div class="step" id="step5">
