@@ -2,11 +2,12 @@
 
 <h2>Introduction</h2>
 
-Welcome to my Active Directory Home Lab Project! This project is designed to help IT enthusiasts and professionals set up a simulated Active Directory environment. By following this guide, you'll gain hands-on experience with AD administration, user and group management, Group Policy settings, and essential networking services like DNS and DHCP.
+Welcome to my Active Directory Home Lab Project! This project is designed to help IT enthusiasts and professionals set up a simulated Active Directory environment. By following this guide, you'll gain hands-on experience with AD administration, user creation with PowerShell, and essential networking services like Remote Access Server and Network Address Translation as well as DNS and DHCP.
 
 Whether you're preparing for certifications, enhancing your skills, or just exploring AD functionalities, this home lab provides a practical and controlled environment to experiment and learn.
 
 Here's a diagram of out lab. As you can see, it outlines all of the tools we'll be using to complete the project. <br/>
+<br/>
 ![IP Diagram1](https://github.com/user-attachments/assets/ef52c009-e5f6-4421-8db9-f2e819ba102b)
 
 
@@ -58,7 +59,7 @@ Here's a diagram of out lab. As you can see, it outlines all of the tools we'll 
             </div>
             </div>
             <div class="step" id="step2">
-                <h2>Step 2: Create Domain Controller and Install Server 2022.</h2>
+                <h2>Step 2: Create Domain Controller and Install Server 2022</h2>
                 <p>The first machine we're going to create is our Server, as this will be our "Domain Controller". When choosing the memory size, remember to work within the limits of your own computer. Click "continue" to confirm the virtual hard drive size, then accept the default choices to finish.<br/>
 <img src="https://github.com/user-attachments/assets/b1dee45b-b3c8-4461-af4e-a4e97417e86a">
 <img src="https://github.com/user-attachments/assets/a77b712b-d4b1-4458-96a0-9167329445d7">
@@ -100,7 +101,7 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
 </div>
             </div>
             <div class="step" id="step3">
-                <h2>Step 3: Networking, Domain Admin Account and Active Directory.</h2>
+                <h2>Step 3: Networking, Domain Admin Account and Active Directory</h2>
                 <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, creating a Domain Admin account, as well as installing Active Directory.<br/>
                 <br/>
 Let's begin with the IP address. One will connect to your home router so we'll leave it as is; the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
@@ -121,15 +122,22 @@ Begin by clicking your "start" icon, choose "Windows Administrative Tools", then
                 <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
-                <h2>Step 4: Install Remote Access Server/Network Address Translation and Set DHCP Scope</h2>
-                <p>This is the second half of our networking setup. Installing RAS/NAT will allow our client computer to connect our virtual network and access the internet while our DHCP scope will give us a range of IP addresses for other users and computers to join the network.<br/>
+                <h2>Step 4: Install Remote Access Server/Network Address Translation and DHCP Server</h2>
+                <p>This is the second half of our networking setup. Installing RAS/NAT will allow for connection to our virtual network and access the internet while our DHCP Server will give us a range of IP addresses for users and computers to join the network.<br/>
                <br/>
 Go to "Add Roles and Features" in your Server Manager, just as you did when you installed Active Directory, and click "Next" until your reach "Select server roles". Choose "Remote Access", click "Next", then choose "Routing" on the "Select role services" screen. Click "Add Features", then "Next" until you reach the "Install" button. Wait through another install session.<br/>
                 <br/>
-Once the install is done, go to "Tools" and scroll down to and click "Routing and Remote Access". Right-click on the domain controller name to open a drop-down menu, then choose "Configure and Enable Routing and Remote Access". Click "Next" to open the installation wizard, choose the "NAT" option and click "Next".<br/>
+Once the install is done, go to "Tools" and scroll down to and click "Routing and Remote Access". Right-click on the domain controller name to open a drop-down menu, then choose "Configure and Enable Routing and Remote Access". Click "Next" to open the installation wizard, choose the "NAT" option and click "Next". From here, you should see the two network interfaces that were created earlier. Choose the one labeled "DHCP", click "Next" then "Finish" to complete the setup.<br/>
                     <br/>
-*Note: Sometimes, the 'network interface' field will come up empty. If this happens, simply close the wizard then reopen it.*<br/>
-                </p>
+**Note: Sometimes, the 'network interface' field will come up empty. If this happens, simply close the wizard then reopen it.**<br/>
+                    <br/>
+Time for one more install. This time, it's our DHCP Server. we'll follow the same process as our previous install, choosing "DHCP Server" on the "Select server roles" screen. Click "Next" until you reach the "Install" button to complete the process. Once the install is complete, got to "Tools" and choose "DHCP" to open the control panel. Let's set up our DHCP scope and subnet mask.<br/>
+                <br/>
+From the control panel, right-click on your domain name then right-click on "IPv4" to open a drop-down menu. Choose "New Scope", then click "Next" to open the scope wizard. Here, you can enter "172.16.0.100-200" as your scope name then click "Next" to continue. On the next screen, you'll enter your IP address range, which will be the same as your scope name. In the "Subnet Mask" field, enter "255.255.255.0" and "Length" should be "24". Click "Next" to continue, again to skip the "Exclusions" screen. For "Lease Duration", you can set it for as long or short as you like. Since we're in a lab environment, it doesn't matter too much. Just be advised that the duration length dictates how long a computer will have that address before it refreshes. Click "Next" to continue, choose "Yes" to confirm DHCP options, then "Next" again. On the next screen (labeled "Router (Default Gateway)"), enter the domain controller's IP address and click the "Add" button. Click "Next" to pass the next two screens as we don't need to change anything with those. Choose the "Yes" option on the "Activate Scope" screen, click "Yes" then "Finish" to complete.<br/>
+                    <br/>
+Just to make sure your server is working, right-click on your domain name and choose "Authorize" from the drop-down menu. After that, right-click again and choose "Refresh". With that, our DHCP server is ready for use.<br/>
+                <br/>
+</p>
                 <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
             <div class="step" id="step5">
