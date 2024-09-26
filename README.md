@@ -135,14 +135,14 @@ Time for one more install. This time, it's our DHCP Server. we'll follow the sam
                 <br/>
 From the control panel, right-click on your domain name then right-click on "IPv4" to open a drop-down menu. Choose "New Scope", then click "Next" to open the scope wizard. Here, you can enter "172.16.0.100-200" as your scope name then click "Next" to continue. On the next screen, you'll enter your IP address range, which will be the same as your scope name. In the "Subnet Mask" field, enter "255.255.255.0" and "Length" should be "24". Click "Next" to continue, again to skip the "Exclusions" screen. For "Lease Duration", you can set it for as long or short as you like. Since we're in a lab environment, it doesn't matter too much. Just be advised that the duration length dictates how long a computer will have that address before it refreshes. Click "Next" to continue, choose "Yes" to confirm DHCP options, then "Next" again. On the next screen (labeled "Router (Default Gateway)"), enter the domain controller's IP address and click the "Add" button. Click "Next" to pass the next two screens as we don't need to change anything with those. Choose the "Yes" option on the "Activate Scope" screen, click "Yes" then "Finish" to complete.<br/>
                     <br/>
-Just to make sure your server is working, right-click on your domain name and choose "Authorize" from the drop-down menu. After that, right-click again and choose "Refresh". With that, our DHCP server is ready for use.<br/>
+Just to make sure your server is working, right-click on your domain name and choose "Authorize" from the drop-down menu. After that, right-click again and choose "Refresh". With that, our DHCP server is active and ready for use.<br/>
                 <br/>
 </p>
                 <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
             <div class="step" id="step5">
-                <h2>Step 5: Run PowerShell Script and Create Users</h2>
-                <p>Create another virtual machine for the client and install Windows 10 on it.</p>
+                <h2>Step 5: Disable Internet Security, Run PowerShell Script and Create Users</h2>
+                <p>Now that we've set up our networking environment, we can move on to creating our "user accounts". Before we do that, though, let's disable the internet security features on our domain controller so we'll have a smoother browsing experience.</p>
                 <img src="images/step5.png" alt="Create Client Virtual Machine">
             </div>
             <div class="step" id="step6">
