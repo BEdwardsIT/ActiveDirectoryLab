@@ -144,9 +144,7 @@ Just to make sure your server is working, right-click on your domain name and ch
                 <h2>Step 5: Disable Internet Security, Run PowerShell Script and Create Users</h2>
                 <p>Now that we've set up our networking environment, we can move on to creating our "user accounts". Before we do that, though, let's disable the internet security features on our domain controller so we'll have a smoother browsing experience. In your Server Manager, click on "Configure this local server". Go to "IE Enhanced Security Configuration" and click the "On" button to open the dialog box. From there, turn both Admin and User options off. This will keep us from getting spammed with warnings when we use the internet.<br/>
                 <br/>
-Now that that's done, we can begin creating our "user base". We'll be using the "Names" and "Create User" resources at the very top of the page. Start by opening the "names.txt" option. Here, you'll find your list of user names. Click "Raw", then "Select All" and we'll copy and paste the list into a text file on your domain controller using notepad. Remember to add your name at the top of the list. After that, save the file to your desktop under "Names". <br/>
-                    <br/>
-For the second portion, we'll create our "user base" with our domain controller's PowerShell ISE. To begin, click "start" and, in PowerShell ISE, left-click to open the options menu. From here, choose "More", then "Run As Administrator". Now, we can copy the "Create Users" script and paste it into the ISE using the "New Script" command. Save as "Create Users" to your desktop. Before running the script, we'll need to disable a security feature. In the field below, type "Set-ExecutionPolicy Unrestricted", hit Enter and answer "Yes To All". This will allow our script to run *you guessed it" without restriction.  </p>
+Now that that's done, we can begin creating our "user base". We'll be using the   </p>
                 <img src="images/step5.png" alt="Create Client Virtual Machine">
             </div>
             <div class="step" id="step6">
