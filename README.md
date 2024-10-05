@@ -153,7 +153,7 @@ For the next step, we'll be using PowerShell. Open your DC's start menu and left
             </div>
             <div class="step" id="step6">
                 <h2>Step 6: Create Client Machine and Install Windows 10</h2>
-                <p>Join the client to the domain and log in with a domain account.</p>
+                <p>Now, it's time to create our client machine. We'll be installing the Windows 10 ISO. Same procedure as the Server ISO. Be sure to set the network adapter to "Internal Network" as the DC will provide the internet connection. Click "Start" to begin running the machine. Begin the install and choose "I don't have a product key' on the Activate screen. On the next screen, choose one of the "Pro" options as the other don't allow us to join a domain. Choose "Custom Install" when asked. Install as normal. Answer the required set up questions and, on the "connect you to a network" screen, choose "I don't have internet". Choose "Continue with limited setup" on the next screen. Choose a username but you can skip the password. Use your discretion of the "Privacy Features" screen and click "Next" then "Not Now" for Cortana. Your OS will finish installing after that.</p>
                 <img src="images/step6.png" alt="Join Client to Domain">
                 <div class="step" id="step6">
                 <h2>Step 7: Join Client to Domain</h2>
