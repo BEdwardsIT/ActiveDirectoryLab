@@ -144,7 +144,7 @@ Just to make sure your server is working, right-click on your domain name and ch
                 <h2>Step 5: Disable Internet Security, Run PowerShell Script and Create Users</h2>
                 <p>Now that we've set up our networking environment, we can move on to creating our "user accounts". Before we do that, though, let's disable the internet security features on our domain controller so we'll have a smoother browsing experience. In your Server Manager, click on "Configure this local server". Go to "IE Enhanced Security Configuration" and click the "On" button to open the dialog box. From there, turn both Admin and User options off. This will keep us from getting spammed with warnings when we use the internet.<br/>
                 <br/>
-Now that that's done, we can begin creating our "user base". We'll be using the .zip file at the top of the page. Start by copying the resource to your domain controller's internet address bar.  </p>
+Now that that's done, we can begin creating our "user base". We'll be using the .zip file at the top of the page. Start by copying the "view raw" resource to your domain controller's internet address bar. Save it your desktop so it's easy to find.  </p>
                 <img src="images/step5.png" alt="Create Client Virtual Machine">
             </div>
             <div class="step" id="step6">
