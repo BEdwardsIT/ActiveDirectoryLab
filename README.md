@@ -176,34 +176,73 @@ Finally, right-click on your name, then "Properties". Click on "Member Of", whic
             </div>
             <div class="step" id="step4">
                 <h2>Step 4: Install Remote Access Server/Network Address Translation and DHCP Server</h2>
-                <p>This is the second half of our networking setup. Installing RAS/NAT will allow for connection to our virtual network and access the internet while our DHCP Server will give us a range of IP addresses for users and computers to join the network.<br/>
-               <br/>
+                <p>This is the second half of our networking setup. Installing RAS/NAT will allow for connection to our virtual network and access to the internet while our DHCP Server will give us a range of IP addresses for users and computers to join the network.<br/>
+
+![IP Diagram2](https://github.com/user-attachments/assets/0e69cc75-ab44-4eda-ab3d-f8a780cfe77f)
+
+<br/>
 Go to "Add Roles and Features" in your Server Manager, just as you did when you installed Active Directory, and click "Next" until your reach "Select server roles". Choose "Remote Access", click "Next", then choose "Routing" on the "Select role services" screen. Click "Add Features", then "Next" until you reach the "Install" button. Wait through another install session.<br/>
-                <br/>
+
+![VirtualBox_Server '22_25_08_2024_15_47_13](https://github.com/user-attachments/assets/17ed72b5-25dd-40fc-a2c7-93901ba426a6)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_48_02](https://github.com/user-attachments/assets/c2fa2fa6-4e23-4880-bedb-c78140e6d42c)<br/>
+
+<br/>
 Once the install is done, go to "Tools" and scroll down to and click "Routing and Remote Access". Right-click on the domain controller name to open a drop-down menu, then choose "Configure and Enable Routing and Remote Access". Click "Next" to open the installation wizard, choose the "NAT" option and click "Next". From here, you should see the two network interfaces that were created earlier. Choose the one labeled "DHCP", click "Next" then "Finish" to complete the setup.<br/>
-                    <br/>
+<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_52_50](https://github.com/user-attachments/assets/76c1c5cd-97ff-4e07-a9cc-0821cf6a1d49)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_53_26](https://github.com/user-attachments/assets/3466bde7-8077-4ae5-81a1-7d5238df37a9)<br/>
+
+![VirtualBox_Server '22_25_08_2024_16_01_51](https://github.com/user-attachments/assets/111cae35-8857-4518-9892-5036febd4a12)<br/>
+
+![VirtualBox_Server '22_25_08_2024_16_04_02](https://github.com/user-attachments/assets/05aa7c26-5405-4dc7-b53c-fbe77484b266)<br>
+
+ <br/>
 **Note: Sometimes, the 'network interface' field will come up empty. If this happens, simply close the wizard then reopen it.**<br/>
                     <br/>
 Time for one more install. This time, it's our DHCP Server. we'll follow the same process as our previous install, choosing "DHCP Server" on the "Select server roles" screen. Click "Next" until you reach the "Install" button to complete the process. Once the install is complete, got to "Tools" and choose "DHCP" to open the control panel. Let's set up our DHCP scope and subnet mask.<br/>
-                <br/>
-From the control panel, click on your domain name then right-click on "IPv4" to open a drop-down menu. Choose "New Scope", then click "Next" to open the scope wizard. Here, you can enter "172.16.0.100-200" as your scope name then click "Next" to continue. On the next screen, you'll enter your IP address range, which will be the same as your scope name. In the "Subnet Mask" field, enter "255.255.255.0" and "Length" should be "24". Click "Next" to continue, again to skip the "Exclusions" screen. For "Lease Duration", you can set it for as long or short as you like. Since we're in a lab environment, it doesn't matter too much. Just be advised that the duration length dictates how long a computer will have that address before it refreshes. Click "Next" to continue, choose "Yes" to confirm DHCP options, then "Next" again. On the next screen (labeled "Router (Default Gateway)"), enter the domain controller's IP address and click the "Add" button. Click "Next" to pass the next two screens as we don't need to change anything with those. Choose the "Yes" option on the "Activate Scope" screen, click "Yes" then "Finish" to complete.<br/>
-                    <br/>
+
+![IP Diagram3](https://github.com/user-attachments/assets/b4e02ae6-1d92-4ff7-898b-1d3e242319d4)
+
+
+![VirtualBox_Server '22_25_08_2024_16_08_15](https://github.com/user-attachments/assets/bba2a923-a16e-4e83-8a48-f8a63c357a02)<br/>
+
+
+![VirtualBox_Server '22_25_08_2024_16_13_21](https://github.com/user-attachments/assets/aa416a8a-8613-49eb-80bf-b343737d28cd)<br/>
+
+<br/>
+From the control panel, click on your domain name then right-click on "IPv4" to open a drop-down menu. Choose "New Scope", then click "Next" to open the scope wizard.<br/>
+
+![VirtualBox_Server '22_25_08_2024_16_16_30](https://github.com/user-attachments/assets/f51f5b2d-4d09-4a4a-b9bc-77af47da6de8)<br/>
+
+Here, you can enter "172.16.0.100-200" as your scope name then click "Next" to continue. On the next screen, you'll enter your IP address range, which will be the same as your scope name. In the "Subnet Mask" field, enter "255.255.255.0" and "Length" should be "24". Click "Next" to continue, again to skip the "Exclusions" screen. For "Lease Duration", you can set it for as long or short as you like. Since we're in a lab environment, it doesn't matter too much. Just be advised that the duration length dictates how long a computer will have that address before it refreshes. Click "Next" to continue, choose "Yes" to confirm DHCP options, then "Next" again. On the next screen (labeled "Router (Default Gateway)"), enter the domain controller's IP address and click the "Add" button. Click "Next" to pass the next two screens as we don't need to change anything with those. Choose the "Yes" option on the "Activate Scope" screen, click "Yes" then "Finish" to complete.<br/>
+
+![VirtualBox_Server '22_25_08_2024_16_18_53](https://github.com/user-attachments/assets/a2258ac9-2fb9-4abe-87a1-230becf09499)<br/>
+
+![VirtualBox_Server '22_25_08_2024_16_25_59](https://github.com/user-attachments/assets/46b3633f-26b4-4687-9659-1f496bec09ad)<br/>
+<br/>
 Just to make sure your server is working, right-click on your domain name and choose "Authorize" from the drop-down menu. After that, right-click again and choose "Refresh". With that, our DHCP server is active and ready for use.<br/>
                 <br/>
 </p>
-                <img src="images/step4.png" alt="Create Users with PowerShell">
             </div>
             <div class="step" id="step5">
                 <h2>Step 5: Disable Internet Security, Run PowerShell Script and Create Users</h2>
                 <p>Now that we've set up our networking environment, we can move on to creating our "user accounts". Before we do that, though, let's disable the internet security features on our domain controller so we'll have a smoother browsing experience. In your Server Manager, click on "Configure this local server". Go to "IE Enhanced Security Configuration" and click the "On" button to open the dialog box. From there, turn both Admin and User options off. This will keep us from getting spammed with warnings when we use the internet.<br/>
-                <br/>
+
+![VirtualBox_DC_07_10_2024_12_00_02](https://github.com/user-attachments/assets/c8de9413-7c22-42ef-a17c-3e6b4d33e87a)<br/>
+
+![VirtualBox_Server '22_26_08_2024_11_49_19](https://github.com/user-attachments/assets/0fb711a0-0af4-4a34-955d-b9d372213450)<br/>
+                 
+<br/>
 Now that that's done, we can begin creating our "user base". We'll be using the .zip file at the top of the page. Start by opening your domain controller's web browser, copy the "view raw". Paste the link to the internet address bar. Save it your desktop so it's easy to find. Left-cleft to open a drop-down menu and choose "Extract All", then save the contants to your desktop. From your now- accessible folder, open "names", add your name to the top of the list and save. <br/>
                 <br/>
 For the next step, we'll be using PowerShell. Open your DC's start menu and left-click "PowerShell ISE". Choose "more", then "Run As Administrator". This is where we'll be using the script. Click the folder ("Open Script") icon in the top right corner. Find the "AD_PS-master" resource in your desktop and open it. From there, open "1_CREATE_USERS". On Line 2 of the script, change the password to whichever password you chose. Otherwise, your client computer won't be able to sign in. Next, we'll need to run a command that allows us to run all scripts. In the field below, type "Set-ExecutionPolicy Unrestricted", hit enter then answer "Yes To All". Now we can run the script without *you guessed it* restriction. From here, we'll go to the directory where the resource is saved. Type in the highlighted command to open the file's contents. Now, your script is ready to run. Click the "Run Script" icon to begin creating your users. Check "Users and Computers" to see your newly populated list. With that completed, we're ready to create our client machine.<br/>
                 <br/>
 </p>
-                <img src="images/step5.png" alt="Create Client Virtual Machine">
-            </div>
+                
+</div>
             <div class="step" id="step6">
                 <h2>Step 6: Create Client Machine and Install Windows 10</h2>
                 <p>Now, it's time to create our client machine. We'll be installing the Windows 10 ISO. Same procedure as the Server ISO. Be sure to set the network adapter to "Internal Network" as the DC will provide the internet connection. Click "Start" to begin running the machine. Begin the install and choose "I don't have a product key' on the Activate screen. On the next screen, choose one of the "Pro" options as the other don't allow us to join a domain. Choose "Custom Install" when asked. Install as normal. Answer the required set up questions and, on the "connect you to a network" screen, choose "I don't have internet". Choose "Continue with limited setup" on the next screen. Choose a username but you can skip the password. Use your discretion of the "Privacy Features" screen and click "Next" then "Not Now" for Cortana. Your OS will finish installing after that. Install the "Guest Additions" software after that but wait on the restart. </p>
