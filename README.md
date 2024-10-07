@@ -261,20 +261,62 @@ Click the folder ("Open Script") icon in the top right corner. Find the "AD_PS-m
 
 ![VirtualBox_Server '22_26_08_2024_13_14_13](https://github.com/user-attachments/assets/f56f3aac-9541-4c52-b48d-c8fd7cd69870)<br/>
 
+![VirtualBox_Server '22_26_08_2024_13_20_31](https://github.com/user-attachments/assets/1c5f734c-20ca-48b9-8bb9-c85211a0c962)<br/>
+
 
 <br/>
 </p>
                 </div>
             <div class="step" id="step6">
                 <h2>Step 6: Create Client Machine and Install Windows 10</h2>
-                <p>Now, it's time to create our client machine. We'll be installing the Windows 10 ISO. Same procedure as the Server ISO. Be sure to set the network adapter to "Internal Network" as the DC will provide the internet connection. Click "Start" to begin running the machine. Begin the install and choose "I don't have a product key' on the Activate screen. On the next screen, choose one of the "Pro" options as the other don't allow us to join a domain. Choose "Custom Install" when asked. Install as normal. Answer the required set up questions and, on the "connect you to a network" screen, choose "I don't have internet". Choose "Continue with limited setup" on the next screen. Choose a username but you can skip the password. Use your discretion of the "Privacy Features" screen and click "Next" then "Not Now" for Cortana. Your OS will finish installing after that. Install the "Guest Additions" software after that but wait on the restart. </p>
+                <p>Now, it's time to create our client machine. We'll be installing the Windows 10 ISO. Same procedure as the Server ISO. Be sure to set the network adapter to "Internal Network" as the DC will provide the internet connection.<br/>
+
+![Screenshot 2024-10-05 125750](https://github.com/user-attachments/assets/e0d94a02-2362-4869-9ec7-87200cd44e80)<br/>
+
+![Screenshot 2024-10-05 125830](https://github.com/user-attachments/assets/723e5ef0-b0d8-426f-8cff-6dd2d30cba57)<br/>
+
+![Screenshot 2024-10-05 125904](https://github.com/user-attachments/assets/49633a0d-4bc7-483e-85db-f1d4d022b935)<br/>
+
+![Screenshot 2024-10-05 125944](https://github.com/user-attachments/assets/d7472f6a-1d29-4925-a89b-5451180d7a00)<br/>
+
+
+Click "Start" to begin running the machine. Begin the install and choose "I don't have a product key' on the Activate screen. On the next screen, choose one of the "Pro" options as the other don't allow us to join a domain.<br/>
+![VirtualBox_Win10_Client_26_08_2024_13_39_50](https://github.com/user-attachments/assets/43a3bb7d-7221-4389-8a71-c9d0b1ede681)<br/>
+
+Choose "Custom Install" when asked. Install as normal. Answer the required set up questions and, on the "connect you to a network" screen, choose "I don't have internet". Choose "Continue with limited setup" on the next screen. Choose a username but you can skip the password. Use your discretion of the "Privacy Features" screen and click "Next" then "Not Now" for Cortana. Your OS will automatically complete the installation process.<br/>
+
+![VirtualBox_Client_05_10_2024_13_40_39](https://github.com/user-attachments/assets/b655abab-8cc4-48b9-9db4-2a52135a676d)<br/>
+
+![VirtualBox_Client_05_10_2024_13_41_08](https://github.com/user-attachments/assets/2f832817-127e-4650-952a-896a7306069c)<br/>
+
+Install the "Guest Additions" software after that but wait on the restart.<br/>
+</p>
         
 </div>
                 <div class="step" id="step7">
                 <h2>Step 7: Join Client to Domain</h2>                                                <p>Now that our client computer is up and running, we can join it to the domain. Right-click the "Start" menu, choose "System". Scroll down to the bottom and choose "Rename This PC (Advanced)". Click the "Change" button. Here is where you'll rename the PC. Choose your PC name, click "Member of Domain", then enter your domain's name in the field. Click "OK" and wait a few seconds, after which a sign-in screen will appear. Sign in with your admin credentials and you're good to go! Your client computer has successfully joined your domain.<br/>
-                <br/>
-More importantly, you have just successfully completed your Active Directory Lab. Congratulations!</p>
-                <img src="images/step7.png" alt="Join Client to Domain">
+
+![VirtualBox_Server_23_08_2024_15_31_55](https://github.com/user-attachments/assets/46d1d2fb-5b1d-4530-a8ed-25cd7e680127)<br/>
+
+![VirtualBox_Win10_Client_26_08_2024_14_27_35](https://github.com/user-attachments/assets/fc80bddb-966b-4256-afd3-b8696487cd24)<br/>
+
+![VirtualBox_Win10_Client_26_08_2024_14_38_10](https://github.com/user-attachments/assets/d58e940f-3572-4613-bfa9-cd1cbf9a3c60)<br/>
+
+![VirtualBox_Win10_Client_26_08_2024_14_38_56](https://github.com/user-attachments/assets/9b80c98c-5127-4fd4-a519-c2dc4ac03cf8)<br/>
+
+![VirtualBox_Win10_Client_26_08_2024_14_39_18](https://github.com/user-attachments/assets/cde125af-d461-43ff-8e49-c379e48ba39c)<br/>
+
+![VirtualBox_Client_05_10_2024_13_53_31](https://github.com/user-attachments/assets/20349221-3f99-457f-8aff-8c5c5df91eea)
+
+
+<br/>
+More importantly, you have just successfully completed your Active Directory Lab. Congratulations! <br/>
+
+![VirtualBox_DC_05_10_2024_13_55_33](https://github.com/user-attachments/assets/e16582da-a387-4d2b-80f1-5d96ba3f90cc)<br/>
+
+![VirtualBox_Win10_Client_26_08_2024_14_47_20](https://github.com/user-attachments/assets/2d3b2ef8-9352-4992-b2db-4e5ed6e37ce8)<br/>
+
+</p>
                 <div class="step" id="step7">     
             </div>
         </div>
