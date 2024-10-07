@@ -226,7 +226,7 @@ Here, you can enter "172.16.0.100-200" as your scope name then click "Next" to c
 Just to make sure your server is working, right-click on your domain name and choose "Authorize" from the drop-down menu. After that, right-click again and choose "Refresh". With that, our DHCP server is active and ready for use.<br/>
                 <br/>
 </p>
-            </div>
+         </div>
             <div class="step" id="step5">
                 <h2>Step 5: Disable Internet Security, Run PowerShell Script and Create Users</h2>
                 <p>Now that we've set up our networking environment, we can move on to creating our "user accounts". Before we do that, though, let's disable the internet security features on our domain controller so we'll have a smoother browsing experience. In your Server Manager, click on "Configure this local server". Go to "IE Enhanced Security Configuration" and click the "On" button to open the dialog box. From there, turn both Admin and User options off. This will keep us from getting spammed with warnings when we use the internet.<br/>
@@ -234,20 +234,43 @@ Just to make sure your server is working, right-click on your domain name and ch
 ![VirtualBox_DC_07_10_2024_12_00_02](https://github.com/user-attachments/assets/c8de9413-7c22-42ef-a17c-3e6b4d33e87a)<br/>
 
 ![VirtualBox_Server '22_26_08_2024_11_49_19](https://github.com/user-attachments/assets/0fb711a0-0af4-4a34-955d-b9d372213450)<br/>
-                 
+                 <br/>
+Now that that's done, we can begin creating our "user base". We'll be using the .zip file at the top of the page. Click the link to open then left-click on "View Raw" then copy.<br/>
+
+![Screenshot 2024-10-04 185053](https://github.com/user-attachments/assets/547d575d-c24f-4868-812e-1b60a4ccae79)<br/>
+
+Paste the link to your domain controller's internet address bar. Save the newly downloaded .zip file to your desktop so it's easy to find. Left-click to open a drop-down menu and choose "Extract All", then save the contants to your desktop. From your now- accessible folder, open "names", add your name to the top of the list and save. <br/>
+![VirtualBox_DC_05_10_2024_11_26_07](https://github.com/user-attachments/assets/609f6308-ca44-44dc-8c28-d98107bd611e)<br/>
+
+![VirtualBox_DC_05_10_2024_11_26_45](https://github.com/user-attachments/assets/acaef224-5c3f-41b5-9153-abcaf1e69d8a)<br/>
+
+![VirtualBox_DC_05_10_2024_11_28_15](https://github.com/user-attachments/assets/5ca5a8d7-57ab-4e59-aa63-25e1b5990e4f)<br/>
+
+![VirtualBox_Server '22_26_08_2024_12_49_08](https://github.com/user-attachments/assets/d1453d40-84a6-40ff-b3d2-d98e15b091eb)<br/>
 <br/>
-Now that that's done, we can begin creating our "user base". We'll be using the .zip file at the top of the page. Start by opening your domain controller's web browser, copy the "view raw". Paste the link to the internet address bar. Save it your desktop so it's easy to find. Left-cleft to open a drop-down menu and choose "Extract All", then save the contants to your desktop. From your now- accessible folder, open "names", add your name to the top of the list and save. <br/>
-                <br/>
-For the next step, we'll be using PowerShell. Open your DC's start menu and left-click "PowerShell ISE". Choose "more", then "Run As Administrator". This is where we'll be using the script. Click the folder ("Open Script") icon in the top right corner. Find the "AD_PS-master" resource in your desktop and open it. From there, open "1_CREATE_USERS". On Line 2 of the script, change the password to whichever password you chose. Otherwise, your client computer won't be able to sign in. Next, we'll need to run a command that allows us to run all scripts. In the field below, type "Set-ExecutionPolicy Unrestricted", hit enter then answer "Yes To All". Now we can run the script without *you guessed it* restriction. From here, we'll go to the directory where the resource is saved. Type in the highlighted command to open the file's contents. Now, your script is ready to run. Click the "Run Script" icon to begin creating your users. Check "Users and Computers" to see your newly populated list. With that completed, we're ready to create our client machine.<br/>
-                <br/>
+For the next step, we'll be using PowerShell. Open your DC's start menu and left-click "PowerShell ISE". Choose "more", then "Run As Administrator". This is where we'll be using the script.<br/>
+
+![VirtualBox_Server '22_26_08_2024_12_52_59](https://github.com/user-attachments/assets/110c71a5-20ff-480d-bfa5-6e331ce85307)<br/>
+
+<br/>
+Click the folder ("Open Script") icon in the top right corner. Find the "AD_PS-master" resource in your desktop and open it. From there, open "1_CREATE_USERS". On Line 2 of the script, change the password to whichever password you chose. Otherwise, your client computer won't be able to sign in. Next, we'll need to run a command that allows us to run all scripts. In the field below, type "Set-ExecutionPolicy Unrestricted", hit enter then answer "Yes To All". Now we can run the script without *you guessed it* restriction. From here, we'll go to the directory where the resource is saved. Type in the highlighted command to open the file's contents. Now, your script is ready to run. Click the "Run Script" icon to begin creating your users. Check "Users and Computers" to see your newly populated list. With that completed, we're ready to create our client machine.<br/>
+
+![VirtualBox_Server '22_26_08_2024_13_11_50](https://github.com/user-attachments/assets/4a129be8-5740-4f4b-88a5-9d5faa8fa070)<br/>
+
+![VirtualBox_DC_05_10_2024_12_27_05](https://github.com/user-attachments/assets/5c041399-75ba-4a2e-8923-06d8a6b4e77c)<br/>
+
+![VirtualBox_Server '22_26_08_2024_13_14_13](https://github.com/user-attachments/assets/f56f3aac-9541-4c52-b48d-c8fd7cd69870)<br/>
+
+
+<br/>
 </p>
-                
-</div>
+                </div>
             <div class="step" id="step6">
                 <h2>Step 6: Create Client Machine and Install Windows 10</h2>
                 <p>Now, it's time to create our client machine. We'll be installing the Windows 10 ISO. Same procedure as the Server ISO. Be sure to set the network adapter to "Internal Network" as the DC will provide the internet connection. Click "Start" to begin running the machine. Begin the install and choose "I don't have a product key' on the Activate screen. On the next screen, choose one of the "Pro" options as the other don't allow us to join a domain. Choose "Custom Install" when asked. Install as normal. Answer the required set up questions and, on the "connect you to a network" screen, choose "I don't have internet". Choose "Continue with limited setup" on the next screen. Choose a username but you can skip the password. Use your discretion of the "Privacy Features" screen and click "Next" then "Not Now" for Cortana. Your OS will finish installing after that. Install the "Guest Additions" software after that but wait on the restart. </p>
-                <img src="images/step6.png" alt="Join Client to Domain">
-                <div class="step" id="step6">
+        
+</div>
+                <div class="step" id="step7">
                 <h2>Step 7: Join Client to Domain</h2>                                                <p>Now that our client computer is up and running, we can join it to the domain. Right-click the "Start" menu, choose "System". Scroll down to the bottom and choose "Rename This PC (Advanced)". Click the "Change" button. Here is where you'll rename the PC. Choose your PC name, click "Member of Domain", then enter your domain's name in the field. Click "OK" and wait a few seconds, after which a sign-in screen will appear. Sign in with your admin credentials and you're good to go! Your client computer has successfully joined your domain.<br/>
                 <br/>
 More importantly, you have just successfully completed your Active Directory Lab. Congratulations!</p>
