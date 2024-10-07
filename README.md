@@ -90,11 +90,19 @@ Enter your newly created (and, hopefully, easy) password to sign in.<br/>
 Before proceeding to the next step, let's run the "Guest Additions" CD image. This will make our VM run more efficiently. To do this, click "devices", then "insert Guest Additions CD image".<br/>
 <img src="https://github.com/user-attachments/assets/ec63c3e0-1b10-4abc-8df0-1307d853d9de"><br/>
 From here, you'll want to head to file explorer. You'll see the disc image in your "D drive". Double-click the "amd-64" version and follow the prompts to begin installing. Once that's done, you'll be asked if you want to reboot. You (obviously) can if you choose to but there's one more thing to do heading to Step 3 that will also require a reboot.<br/>
+![VirtualBox_Server_23_08_2024_14_50_32](https://github.com/user-attachments/assets/a328947c-b77d-42d8-95a0-96c9ceddc9ea)<br/>
+<br/>
+![VirtualBox_Server_23_08_2024_14_50_55](https://github.com/user-attachments/assets/f96d76cb-e459-42e5-aea6-4b50fa1e96b0)
+
 
 Let's rename our computer.<br/>
 <br/>
-Start by right-clicking the "start" tab and going to "system". Click the "Rename this PC" button and choose your PC's new name. Again, the choice is yours. Restart the VM after renaming and we'll be ready for Step 3!
-
+Start by right-clicking the "start" tab and going to "system". Click the "Rename this PC" button and choose your PC's new name. Again, the choice is yours. Restart the VM after renaming and we'll be ready for Step 3!<br/>
+<br/>
+![VirtualBox_Server_23_08_2024_15_31_55](https://github.com/user-attachments/assets/8ab86064-544e-44df-9474-35d17a96a8e6)<br/>
+<br/>
+![VirtualBox_Server_23_08_2024_15_32_19](https://github.com/user-attachments/assets/2556e009-59d7-4b81-8e58-3d9d5cbc7a63)<br/>
+<br/>
 
 </p>
         
