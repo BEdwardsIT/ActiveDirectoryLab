@@ -113,21 +113,66 @@ Start by right-clicking the "start" tab and going to "system". Click the "Rename
                 <p>Now, it's time to set up our VM's networking. For this portion of the project, we'll be assigning an IP address and subnet mask for an internal NIC, creating a Domain Admin account, as well as installing Active Directory.<br/>
                 <br/>
 Let's begin with the IP address. One will connect to your home router so we'll leave it as is; the other (which we'll need to set up manually) will allow your client computer to connect to the server.<br/>
-               <br/>
-We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen. Here, you should see your two adapters, "Ethernet" and "Ethernet2". Ethernet2 will serve as the internal connection. Double-click "Ethernet 2", then click "properties". After that, double-click on "Internet Protocol Version 4 (TCP/IPv4)". This is where we'll assign our new IP address. From here, choose the "Use the following IP address" option and use "172.16.0.1" as your IP address. For the subnet mask, use "255.255.255.0". Leave the default gateway section blank. For the section below, labeled "Use the following DNS server addresses", we can use either the "172" IP address or you can use "127.0.0.1", which is a loopback address. Click "OK" to complete that portion and our IP address setup is now finished.<br/>
-                
+ <br/>
+<img src="https://github.com/user-attachments/assets/8f54c3f2-7ebe-4d75-93dc-e2274447d6f4"><br/>
+<br/>
+We'll start by clicking the "network" icon at the bottom right corner of your screen, then click "network and internet settings" to open. Next, we'll click on "change adapter options" to open the network connections screen.<br/>
+                    
+![VirtualBox_Server_23_08_2024_15_10_48](https://github.com/user-attachments/assets/e490d922-15e7-45fc-b2d8-298e4c5fc0cf)<br/>
+                    <br/>
+Here, you should see your two adapters, "Ethernet" and "Ethernet2". Ethernet2 will serve as the internal connection. Double-click "Ethernet 2", then click "properties". After that, double-click on "Internet Protocol Version 4 (TCP/IPv4)". <br/>
+![VirtualBox_Server_23_08_2024_15_24_13](https://github.com/user-attachments/assets/9012d4d3-4d6d-412f-87aa-267664c95be9)<br/>
+
+![VirtualBox_Server_23_08_2024_15_25_12](https://github.com/user-attachments/assets/528d5760-e8d3-47ee-9950-7c1236ca5f02)<br/>
+
+<br/>
+This is where we'll assign our new IP address. From here, choose the "Use the following IP address" option and use "172.16.0.1" as your IP address. For the subnet mask, use "255.255.255.0". Leave the default gateway section blank. For the section below, labeled "Use the following DNS server addresses", we can use either the "172" IP address or you can use "127.0.0.1", which is a loopback address. Click "OK" to complete that portion and our IP address setup is now finished.
+<br/>
+
+![VirtualBox_Server_23_08_2024_15_27_16](https://github.com/user-attachments/assets/daa0ea6d-1532-42ae-8870-7a4730981806)<br/>
+
 Our next step will be installing Active Directory.<br/>
 <br/>
 Begin by open your "Server Manager" and clicking on "Add roles and features". Click "Next" until you reach the screen labeled "Select server role", at which point you'll choose "Active Directory Domain Services". Click the "Add Features" button on the pop-up screen and "next" until you reach the "install" button. Click to begin installation. Once that's finished, we can move on to the next step; promoting the server to Domain Controller.<br/>
+![VirtualBox_Server_23_08_2024_15_59_07](https://github.com/user-attachments/assets/24588c45-ab18-4faf-96be-1cf5ef74a06c)<br/>
+
+![VirtualBox_Server_23_08_2024_15_59_53](https://github.com/user-attachments/assets/7859283c-7548-4139-8c8c-4b5d7c08b7a1)<br/>
 <br/>
-Click on the flag icon in the top right corner of your Server Manager, then click on the "Promote this server to a domain controller" option. On the pop-up screen, select "add a new forest", then choose a name for your domain. *For simplicity's sake, I chose "mydomain.com" but you can name yours as you see fit.* On the next screen, you'll be asked to enter a password. You won't use it but you have to enter it in order to move to the next screen so it's best to use the password you used to log in. Click "next" until you reach the "install" button. Click it and your machine will automatically restart.  <br/>
+Click on the flag icon in the top right corner of your Server Manager, then click on the "Promote this server to a domain controller" option. On the pop-up screen, select "add a new forest", then choose a name for your domain. *For simplicity's sake, I chose "mydomain.com" but you can name yours as you see fit.* On the next screen, you'll be asked to enter a password. You won't use it but you have to enter it in order to move to the next screen so it's best to use the password you used to log in. Click "next" until you reach the "install" button. Click it and your machine will automatically restart.<br/>
+![VirtualBox_Server_23_08_2024_16_02_29](https://github.com/user-attachments/assets/65742de1-7b42-4c2d-9e1c-ac9983e24db3)<br/>
+
+![VirtualBox_Server_24_08_2024_11_04_38](https://github.com/user-attachments/assets/ae6dfa5f-42ef-4e50-929f-ea7b251eae4f)<br/>
+
 <br/>
 Once your machine restarts, you'll be greeted with a new "MYDOMAIN\Administrator" screen. Sign in to your machine and your account to begin the next portion, where we'll be creating a dedicated domain admin account. <br/>
+
+![VirtualBox_Server '22_24_08_2024_11_50_21](https://github.com/user-attachments/assets/1b7367fb-7fa0-4d5b-bba3-72193a6cf017)<br/>
 <br/>
-Begin by clicking your "start" icon, choose "Windows Administrative Tools", then "Active Directory Users and Computers". From there, right-click on your domain name and a drop down menu will appear. Go to "New", then "Organizational Unit". Use "ADMINS" as your "new object" name and uncheck the "Protect container..." option then click OK to continue. Now, right-click "ADMINS", go to "New", then choose "User". We'll fill out our admin information here. Type you first and last name into the appropriate fields and, for "User logon name", format the entry as *a-first initial last name* as shown in the example pic. Click "next" to continue to the password select screen. To keep things simple, just use the password you use to log in to your machine. Make sure the "Password never expires" option is checked and click "Next" to continue, then click "Finish". Finally, right-click on your name, then "Properties". Click on "Member Of", which will open a Domain Services Folder. Click "Add" and type "Domain Admins" into the "Enter the object names..." field. Click "Check Names", then "OK". After that, click "Apply" then "OK" to finish. Now, our domain admin account is ready to use. Sign out, then sign in with your new admin account and we can begin the next step.
+Begin by clicking your "start" icon, choose "Windows Administrative Tools", then "Active Directory Users and Computers". From there, right-click on your domain name and a drop down menu will appear. Go to "New", then "Organizational Unit". Use "ADMINS" as your "new object" name and uncheck the "Protect container..." option then click OK to continue.<br/>
+![VirtualBox_Server '22_25_08_2024_15_25_21](https://github.com/user-attachments/assets/69170555-6cd3-48ec-a897-898915462611)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_29_01](https://github.com/user-attachments/assets/96f017ed-24da-4191-8d14-6985880e5dc0)<br/>
+<br/>
+Now, right-click "ADMINS", go to "New", then choose "User". We'll fill out our admin information here. Type you first and last name into the appropriate fields and, for "User logon name", format the entry as *a-first initial last name* as shown in the example pic. Click "next" to continue to the password select screen. To keep things simple, just use the password you use to log in to your machine. Make sure the "Password never expires" option is checked and click "Next" to continue, then click "Finish".<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_30_10](https://github.com/user-attachments/assets/2eaaff69-55c1-4d25-99f2-eae1643530ac)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_31_07](https://github.com/user-attachments/assets/f3e5e15b-8ca3-4aec-b2b7-dc54f0523d77)<br/>
+
+
+![VirtualBox_Server '22_25_08_2024_15_31_58](https://github.com/user-attachments/assets/d1f3327b-c89c-4eb2-a72f-2b237d7fa222)<br/>
+
+Finally, right-click on your name, then "Properties". Click on "Member Of", which will open a Domain Services Folder. Click "Add" and type "Domain Admins" into the "Enter the object names..." field. Click "Check Names", then "OK". After that, click "Apply" then "OK" to finish. Now, our domain admin account is ready to use. Sign out, then sign in with your new admin account and we can begin the next step.<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_34_14](https://github.com/user-attachments/assets/07ed0a84-06eb-4b52-a93d-2bb0781a3216)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_38_26](https://github.com/user-attachments/assets/682f7abf-8a2b-4c36-bb84-ef202db9281b)<br/>
+
+![VirtualBox_Server '22_25_08_2024_15_41_10](https://github.com/user-attachments/assets/a1a97237-51db-4541-b641-2fe8e3f162ec)<br/>
+
+
 
 </p>
-                <img src="images/step3.png" alt="Install Server 2019">
             </div>
             <div class="step" id="step4">
                 <h2>Step 4: Install Remote Access Server/Network Address Translation and DHCP Server</h2>
