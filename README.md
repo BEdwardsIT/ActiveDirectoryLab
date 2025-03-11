@@ -6,7 +6,7 @@ Welcome to my Active Directory Home Lab Project! This project is designed to hel
 
 Whether you're preparing for certifications, enhancing your skills, or just exploring AD functionalities, this home lab provides a practical and controlled environment to experiment and learn.
 
-Here's a diagram of out lab. As you can see, it outlines all of the tools we'll be using to complete the project. <br/>
+Here's a diagram of our lab. As you can see, it outlines all of the tools we'll be using to complete the project. <br/>
 <br/>
 ![IP Diagram1](https://github.com/user-attachments/assets/ef52c009-e5f6-4421-8db9-f2e819ba102b)
 
